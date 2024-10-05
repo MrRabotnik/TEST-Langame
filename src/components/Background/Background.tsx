@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Background.scss";
 import IMAGES from "../../utils/images";
 
 const Background = () => {
+    const [time, setTime] = useState(new Date());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(new Date());
+        }, 60000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const formattedTime = time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+
     return (
         <div className="background-container">
             <div className="top-left-container">
@@ -23,7 +35,7 @@ const Background = () => {
             </div>
             <div className="bottom-right-container">
                 <div>EN</div>
-                <p>16 : 40</p>
+                <p>{formattedTime}</p>
             </div>
         </div>
     );

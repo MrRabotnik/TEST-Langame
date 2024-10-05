@@ -1,43 +1,58 @@
 @import "../../utils/constants.scss";
 
 .login-form {
-    height: 100%;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
     .logo-container {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 4vw;
+
+        img {
+            width: 7vw;
+            height: auto;
+        }
     }
 
     .inputs {
-        min-width: 20vw;
+        width: 20vw;
         display: flex;
         gap: 1vw;
         flex-direction: column;
 
         .input-container {
-            border-radius: 0.7vw;
-            padding: 1.5vw 1vw;
+            border-radius: 0.3vw;
+            padding: 1.2vw 1vw;
             background-color: $input-bg-color;
             display: flex;
             align-items: center;
             gap: 0.5vw;
 
+            img {
+                width: 1.5vw;
+                height: auto;
+            }
+
             .input {
                 outline: none;
                 border: none;
                 background-color: transparent;
+                flex-grow: 1;
+                padding: 0.5vw 0;
+                font-size: 1vw;
             }
         }
 
         .forgot-password-container {
             text-align: center;
             margin-top: 1vw;
-            margin-bottom: 3vw;
+            margin-bottom: 2vw;
+            font-size: 0.7vw;
         }
 
         .submit-button {
@@ -45,8 +60,55 @@
             width: 100%;
             padding: 1vw;
             color: white;
-            background-color: #dc00002b;
+            background-color: #dc0000;
             border: none;
+            text-transform: uppercase;
+            font-size: 0.8vw;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #dc00002b;
+                transition: 0.3s;
+            }
+        }
+
+        .no-account-yet {
+            font-size: 0.8vw;
+            margin-top: 1vw;
+
+            & > * {
+                text-align: center;
+            }
+
+            p {
+                margin-bottom: 0.3vw;
+            }
+
+            a {
+                display: block;
+                color: $custom-red;
+                font-weight: bold;
+            }
+        }
+
+        .install-the-app {
+            margin-top: 1vw;
+            font-size: 0.8vw;
+
+            p {
+                text-align: center;
+            }
+
+            .apps-container {
+                display: flex;
+                justify-content: center;
+                gap: 2vw;
+
+                img {
+                    width: 8vw;
+                    height: auto;
+                }
+            }
         }
     }
 }
