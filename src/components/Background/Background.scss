@@ -1,0 +1,64 @@
+@import "../../utils/constants.scss";
+
+.background-container {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    .top-left-container {
+        position: absolute;
+        left: 5vw;
+        top: 4vw;
+
+        & > p {
+            margin: 0;
+        }
+
+        .number {
+            text-align: center;
+            font-size: 7vw;
+            margin: 0;
+            font-weight: bolder;
+        }
+
+        .text {
+            font-size: 2.5vw;
+            font-weight: bold;
+        }
+    }
+
+    .top-right-container {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .bottom-left-container {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .bottom-right-container {
+        position: absolute;
+        right: 2vw;
+        bottom: 2vw;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+
+        & > div {
+            border-radius: 5px;
+            border: 1px solid $border-color;
+            margin-right: 1vw;
+            padding: 0.5vw;
+        }
+
+        p {
+            font-size: 2.5vw;
+        }
+    }
+}
